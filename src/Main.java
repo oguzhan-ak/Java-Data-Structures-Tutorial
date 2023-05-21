@@ -1,29 +1,29 @@
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         String slash = "/////////////////////////////////";
 
-        // 2D Arrays
-        char[][] board = new char[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                board[i][j] = '-';
-            }
+        // List And ArrayList
+
+        List<String> colors = new ArrayList<>();
+        colors.add("Blue");
+        colors.add("Pink");
+        System.out.println("Size: " + colors.size());
+        System.out.println(colors);
+        System.out.println(slash);
+        colors.add("Yellow");
+        System.out.println("Size: " + colors.size());
+        System.out.println(colors);
+        System.out.println(slash);
+        for (String color : colors) {
+            System.out.println(color);
         }
-
-        System.out.println(Arrays.deepToString(board));
         System.out.println(slash);
-
-        board[0][0] = 'O';
-        board[1][0] = 'O';
-        board[2][0] = 'O';
-
-        System.out.println(Arrays.deepToString(board));
+        colors.forEach(System.out::println);
         System.out.println(slash);
-
-        char[][] board2 = {new char[]{'0', '-', '-'}, new char[]{'0', '-', '-'}, new char[]{'0', '-', '-'}};
-
-        System.out.println(Arrays.deepToString(board2));
+        List<String> colorsUnmodifiable = List.of("blue", "pink");
+//        colorsUnmodifiable.add("Brown");
     }
 }
