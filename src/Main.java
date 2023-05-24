@@ -1,29 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
         String slash = "/////////////////////////////////";
 
-        // List And ArrayList
-
-        List<String> colors = new ArrayList<>();
-        colors.add("Blue");
-        colors.add("Pink");
-        System.out.println("Size: " + colors.size());
-        System.out.println(colors);
-        System.out.println(slash);
-        colors.add("Yellow");
-        System.out.println("Size: " + colors.size());
-        System.out.println(colors);
-        System.out.println(slash);
-        for (String color : colors) {
-            System.out.println(color);
-        }
-        System.out.println(slash);
-        colors.forEach(System.out::println);
-        System.out.println(slash);
-        List<String> colorsUnmodifiable = List.of("blue", "pink");
-//        colorsUnmodifiable.add("Brown");
+        // Stack
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+//        System.out.println(stack.pop());
+//        System.out.println(stack.size());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.size());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.size());
+//        System.out.println(stack.empty());
+        System.out.println(stack.search(2));
     }
 }
