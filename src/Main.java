@@ -1,21 +1,24 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
         String slash = "/////////////////////////////////";
 
-        // Stack
-        Stack<Integer> stack = new Stack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        System.out.println(stack.pop());
-        System.out.println(stack.size());
-        System.out.println(stack.pop());
-        System.out.println(stack.size());
-        System.out.println(stack.pop());
-        System.out.println(stack.size());
-        System.out.println(stack.empty());
-        System.out.println(stack.search(2));
+        // Queue
+        Queue<Person> superMarket = new LinkedList<>();
+        superMarket.add(new Person("Oğuzhan", 23));
+        superMarket.add(new Person("Ahmet", 32));
+        superMarket.add(new Person("Ayşe", 56));
+
+        System.out.println(superMarket.size());
+        System.out.println(superMarket.peek());
+        System.out.println(superMarket.poll());
+        System.out.println(superMarket.size());
+        System.out.println(superMarket.peek());
+    }
+
+    record Person(String name, int age) {
+
     }
 }
