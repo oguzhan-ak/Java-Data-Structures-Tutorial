@@ -1,7 +1,4 @@
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,6 +27,26 @@ public class Main {
         balls.add(new Ball("red"));
         balls.remove(new Ball("red"));
         balls.forEach(System.out::println);
+    }
+
+    private static void maps() {
+        Map<Integer, Person> personMap = new HashMap<>();
+        personMap.put(1, new Person("alex", 23));
+        personMap.put(2, new Person("morgan", 22));
+        personMap.put(3, new Person("ozzy", 22));
+        personMap.put(3, new Person("ozzyy", 22));
+        System.out.println(personMap);
+        System.out.println(personMap.size());
+        System.out.println(personMap.get(2));
+        System.out.println(personMap.get(4));
+        System.out.println(personMap.containsKey(3));
+        System.out.println(personMap.keySet());
+        System.out.println(personMap.entrySet());
+        personMap.entrySet().forEach(x -> System.out.println(x.getKey() + "-" + x.getValue()));
+        personMap.forEach((key, person) -> System.out.println(key + " - " + person));
+        personMap.remove(3);
+        personMap.forEach((key, person) -> System.out.println(key + " - " + person));
+        System.out.println(personMap.getOrDefault(4, new Person("default", 10)));
     }
 
     private static void linkedLists() {
