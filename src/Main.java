@@ -26,6 +26,7 @@ public class Main {
         System.out.println(queue.size());
         System.out.println(queue.peek());
     }
+    
 
     record Person(String name, int age) {
 
